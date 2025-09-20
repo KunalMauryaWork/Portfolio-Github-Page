@@ -4,74 +4,330 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kunal Maurya | DevOps & Cloud Engineer</title>
-  styles.css
+  https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap
+  <style>
+    :root {
+      --accent: #00e1ff;
+      --accent2: #00ffa3;
+      --bg: #232526;
+      --glass: rgba(35,37,38,0.85);
+      --radius: 18px;
+    }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: 'Fira Mono', monospace;
+      background: var(--bg);
+      relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      top: -200px; left: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      opacity: 0.18;
+      filter: blur(20px);
+      pointer-events: none;
+      animation: moveGlow 12s linear infinite alternate;
+    }
+    @keyframes moveGlow {
+      0% { top: -200px; left: -200px; }
+      100% { top: 60vh; left: 60vw; }
+    }
+    header {
+      position: relative;
+      z-index: 1;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #232526 70%, var(--accent) 100%);
+      overflow: hidden;
+    }
+    .glass {
+      background: var(--glass);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 32px 0 #00e1ff22;
+      backdrop-filter: blur(8px);
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .avatar {
+      width: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px var(--accent2);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+    }
+    h2 {
+      margin: 0.5rem 0 1rem 0;
+      font-weight: 400;
+      color: #fff;
+      font-size: 1.3rem;
+    }
+    .tagline {
+      color: var(--accent2);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    nav {
+      margin: 1.5rem 0 0 0;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--accent2);
+      transition: width .3s;
+      margin: 0 auto;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--glass);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 0 20px var(--accent)11;
+      position: relative;
+      z-index: 2;
+    }
+    .highlight {
+      color: var(--accent);
+    }
+    .skills-list {
+      margin-top: 1.5rem;
+    }
+    .skill {
+      margin-bottom: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .skill span {
+      min-width: 140px;
+      font-weight: bold;
+      color: var(--accent2);
+      font-size: 1.1rem;
+    }
+    .skill-bar-bg {
+      flex: 1;
+      background: #222;
+      border-radius: 8px;
+      height: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 8px var(--accent)22;
+    }
+    .skill-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      transition: width 1.2s cubic-bezier(.4,2,.6,1);
+      box-shadow: 0 0 8px var(--accent)44;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .project-card {
+      background: #232526ee;
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      box-shadow: 0 0 16px var(--accent)11;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.04) rotate(-1deg);
+      box-shadow: 0 8px 32px var(--accent2)33;
+      border: 1.5px solid var(--accent2);
+      background: #232526f8;
+    }
+    .project-card h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+    .project-card a {
+      color: var(--accent2);
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      background: #2c2f34;
+      color: #fff;
+      resize: none;
+      outline: none;
+      box-shadow: 0 0 8px var(--accent)11;
+      transition: box-shadow 0.2s;
+    }
+    form input:focus, form textarea:focus {
+      box-shadow: 0 0 16px var(--accent2)44;
+    }
+    form button {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #232526;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 0 8px var(--accent2)22;
+    }
+    form button:hover {
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      color: #fff;
+    }
+    #formStatus {
+      font-size: 1rem;
+      color: var(--accent2);
+      min-height: 1.2em;
+    }
+    .social-links {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .social-links a {
+      color: var(--accent);
+      margin-right: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--accent2);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+      color: #aaa;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      z-index: 2;
+      position: relative;
+    }
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      section, .glass { padding: 1rem; }
+      h1 { font-size: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      nav a { margin: 0 0.5rem; }
+      .avatar { width: 80px; }
+    }
+  </style>
 </head>
 <body>
-  <header id="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
+  <header>
+    <div class="glass">
       https://avatars.githubusercontent.com/u/your-github-username
       <h1>Kunal Maurya</h1>
       <h2>DevOps & Cloud Engineer</h2>
       <p class="tagline">Automating the future, one pipeline at a time 🚀</p>
       <nav>
-        #aboutAbout</a>
+        <aboutAbout</a>
         #skillsSkills</a>
         #projectsProjects</a>
         #contactContact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="container">
+     about">
       <h3>👋 About Me</h3>
       <p>
-        Hi, I'm Kunal—a passionate DevOps & Cloud Engineer who loves building, breaking, and autom cloud!<br>
+        Hi, I'm Kunal—a passionate DevOps & Cloud Engineer who loves building, breaking, and automating things in the cloud!<br>
         I thrive on solving real-world problems, mentoring students, and making infrastructure as code look like magic.<br>
         <span class="highlight">#Terraform #Kubernetes #GitHubActions #AWS #Docker</span>
       </p>
     </section>
 
-    <section id="skills" class="container">
+    <section id="skills">
       <h3>🛠️ Skills</h3>
       <div class="skills-list">
         <div class="skill">
           <span>AWS</span>
-          <div class="skill-bar" data-skill="92"></div>
-       span>Kubernetes</span>
-          <div class="skill-bar" data-skill="88"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="92"></div></div>
+        </div>
+        <div class="skill">
+          <span>Kubernetes</span>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="88"></div></div>
         </div>
         <div class="skill">
           <span>Terraform</span>
-          <div class="skill-bar" data-skill="85"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="85"></div></div>
         </div>
         <div class="skill">
           <span>Docker</span>
-          <div class="skill-bar" data-skill="90"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="90"></div></div>
         </div>
         <div class="skill">
           <span>GitHub Actions</span>
-          <div class="skill-bar" data-skill="87"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="87"></div></div>
         </div>
         <div class="skill">
           <span>Python</span>
-          <div class="skill-bar" data-skill="80"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="80"></div></div>
         </div>
         <div class="skill">
           <span>Linux</span>
-          <div class="skill-bar" data-skill="93"></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-skill="93"></div></div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="container">
+    <section id="projects">
       <h3>🚀 Projects</h3>
       <div class="projects-grid">
         <div class="project-card">
           <h4>Production-Grade EKS with Terraform & GitHub Actions</h4>
           <p>Automated EKS provisioning using Terraform modules and dynamic GitHub Actions workflows.</p>
-          <a href/github.com/your-github-username/eks-terraform-github-actionsView on GitHub</a>
+          https://github.com/your-github-username/eks-terraform-github-actionsView on GitHub</a>
         </div>
         <div class="project-card">
           <h4>Cloud-Native Payment Processing on EKS</h4>
@@ -86,7 +342,7 @@
       </div>
     </section>
 
-    <section id="contact" class="container">
+    <section id="contact">
       <h3>📬 Contact</h3>
       <form id="contactForm" autocomplete="off">
         <input type="text" id="name" placeholder="Your Name" required />
@@ -98,7 +354,7 @@
       <div class="social-links">
         mailto:kunal.maurya@email.comEmail</a>
         https://linkedin.com/in/your-linkedin
-        https://github.com/your-github-username
+        <a href="https://github.com/your-githubGitHub</a>
       </div>
     </section>
   </main>
@@ -106,6 +362,47 @@
   <footer>
     &copy; 2025 Kunal Maurya | Built with 💙, Docker, and a lot of YAML.
   </footer>
-  script.js</script>
+  <script>
+    // Animate skill bars on scroll
+    function animateSkills() {
+      document.querySelectorAll('.skill-bar').forEach(bar => {
+        const value = bar.getAttribute('data-skill');
+        bar.style.width = value + '%';
+      });
+    }
+    function onScroll() {
+      const skillsSection = document.getElementById('skills');
+      if (!skillsSection) return;
+      const rect = skillsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        animateSkills();
+        window.removeEventListener('scroll', onScroll);
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('DOMContentLoaded', onScroll);
+
+    // Smooth scroll for nav links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+      // Contact form handler (demo only)
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          document.getElementById('formStatus').textContent = "Thank you! I'll get back to you soon.";
+          form.reset();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
