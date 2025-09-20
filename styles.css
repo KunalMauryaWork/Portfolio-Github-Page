@@ -1,203 +1,111 @@
-body {
-  font-family: 'Segoe UI', 'Fira Mono', monospace, Arial, sans-serif;
-  background: linear-gradient(120deg, #232526, #414345);
-  color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kunal Maurya | DevOps & Cloud Engineer</title>
+  styles.css
+</head>
+<body>
+  <header id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      https://avatars.githubusercontent.com/u/your-github-username
+      <h1>Kunal Maurya</h1>
+      <h2>DevOps & Cloud Engineer</h2>
+      <p class="tagline">Automating the future, one pipeline at a time 🚀</p>
+      <nav>
+        #aboutAbout</a>
+        #skillsSkills</a>
+        #projectsProjects</a>
+        #contactContact</a>
+      </nav>
+    </div>
+  </header>
 
-header {
-  background: #232526;
-  padding: 2rem 0 1rem 0;
-  text-align: center;
-  box-shadow: 0 2px 12px #00e1ff22;
-}
+  <main>
+    <section id="about" class="container">
+      <h3>👋 About Me</h3>
+      <p>
+        Hi, I'm Kunal—a passionate DevOps & Cloud Engineer who loves building, breaking, and autom cloud!<br>
+        I thrive on solving real-world problems, mentoring students, and making infrastructure as code look like magic.<br>
+        <span class="highlight">#Terraform #Kubernetes #GitHubActions #AWS #Docker</span>
+      </p>
+    </section>
 
-.avatar {
-  width: 120px;
-  border-radius: 50%;
-  border: 3px solid #00e1ff;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 20px #00e1ff55;
-}
+    <section id="skills" class="container">
+      <h3>🛠️ Skills</h3>
+      <div class="skills-list">
+        <div class="skill">
+          <span>AWS</span>
+          <div class="skill-bar" data-skill="92"></div>
+       span>Kubernetes</span>
+          <div class="skill-bar" data-skill="88"></div>
+        </div>
+        <div class="skill">
+          <span>Terraform</span>
+          <div class="skill-bar" data-skill="85"></div>
+        </div>
+        <div class="skill">
+          <span>Docker</span>
+          <div class="skill-bar" data-skill="90"></div>
+        </div>
+        <div class="skill">
+          <span>GitHub Actions</span>
+          <div class="skill-bar" data-skill="87"></div>
+        </div>
+        <div class="skill">
+          <span>Python</span>
+          <div class="skill-bar" data-skill="80"></div>
+        </div>
+        <div class="skill">
+          <span>Linux</span>
+          <div class="skill-bar" data-skill="93"></div>
+        </div>
+      </div>
+    </section>
 
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  color: #00e1ff;
-  letter-spacing: 2px;
-}
+    <section id="projects" class="container">
+      <h3>🚀 Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Production-Grade EKS with Terraform & GitHub Actions</h4>
+          <p>Automated EKS provisioning using Terraform modules and dynamic GitHub Actions workflows.</p>
+          <a href/github.com/your-github-username/eks-terraform-github-actionsView on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h4>Cloud-Native Payment Processing on EKS</h4>
+          <p>Built a scalable payment system using KEDA, Karpenter, and Kubernetes autoscaling.</p>
+          https://github.com/your-github-username/payment-processing-eksView on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h4>DevOps Workshop for Students</h4>
+          <p>Designed and delivered hands-on DevOps sessions for college students, focusing on real-world cloud practices.</p>
+          https://github.com/your-github-username/devops-workshopView on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-h2 {
-  margin: 0.5rem 0 1rem 0;
-  font-weight: 400;
-  color: #fff;
-  font-size: 1.3rem;
-}
+    <section id="contact" class="container">
+      <h3>📬 Contact</h3>
+      <form id="contactForm" autocomplete="off">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="formStatus"></p>
+      </form>
+      <div class="social-links">
+        mailto:kunal.maurya@email.comEmail</a>
+        https://linkedin.com/in/your-linkedin
+        https://github.com/your-github-username
+      </div>
+    </section>
+  </main>
 
-.tagline {
-  color: #00e1ff;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-nav {
-  margin: 1.5rem 0 0 0;
-}
-
-nav a {
-  color: #00e1ff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #232526cc;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 0 20px #00e1ff22;
-}
-
-.highlight {
-  color: #00e1ff;
-}
-
-.skills-list {
-  margin-top: 1rem;
-}
-
-.skill {
-  margin-bottom: 1.2rem;
-}
-
-.skill span {
-  display: inline-block;
-  width: 160px;
-  font-weight: bold;
-  color: #00e1ff;
-}
-
-.skill-bar {
-  display: inline-block;
-  height: 16px;
-  width: 0;
-  background: linear-gradient(90deg, #00e1ff, #00ffa3);
-  border-radius: 8px;
-  vertical-align: middle;
-  transition: width 1.2s cubic-bezier(.4,2,.6,1);
-  box-shadow: 0 0 8px #00e1ff44;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.project-card {
-  background: #333;
-  border-radius: 8px;
-  padding: 1.2rem;
-  box-shadow: 0 0 10px #00e1ff11;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 24px #00e1ff33;
-}
-
-.project-card h4 {
-  margin: 0 0 0.5rem 0;
-  color: #00e1ff;
-}
-
-.project-card a {
-  color: #00e1ff;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-form input, form textarea {
-  padding: 0.7rem;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-  background: #2c2f34;
-  color: #fff;
-  resize: none;
-}
-
-form button {
-  background: linear-gradient(90deg, #00e1ff, #00ffa3);
-  color: #232526;
-  border: none;
-  border-radius: 6px;
-  padding: 0.7rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-form button:hover {
-  background: linear-gradient(90deg, #00ffa3, #00e1ff);
-}
-
-#formStatus {
-  font-size: 1rem;
-  color: #00ffa3;
-  min-height: 1.2em;
-}
-
-.social-links {
-  margin-top: 1rem;
-}
-
-.social-links a {
-  color: #00e1ff;
-  margin-right: 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.social-links a:hover {
-  color: #fff;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .container { padding: 1rem; }
-  h1 { font-size: 2rem; }
-  .projects-grid { grid-template-columns: 1fr; }
-  nav a { margin: 0 0.5rem; }
-  .avatar { width: 80px; }
-}
+  <footer>
+    &copy; 2025 Kunal Maurya | Built with 💙, Docker, and a lot of YAML.
+  </footer>
+  script.js</script>
+</body>
+</html>
