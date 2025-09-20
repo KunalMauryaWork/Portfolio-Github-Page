@@ -4,182 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kunal Maurya | DevOps & Cloud Engineer</title>
-  https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap
-  <style>
-    body {
-      font-family: 'Fira Mono', monospace;
-      background: linear-gradient(120deg, #232526, #414345);
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 1rem 1rem;
-    }
-    .avatar {
-      width: 120px;
-      border-radius: 50%;
-      border: 3px solid #00e1ff;
-      margin-bottom: 1rem;
-     px #00e1ff55;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #00e1ff;
-      letter-spacing: 2px;
-    }
-    h2 {
-      margin: 0.5rem 0 2rem 0;
-      font-weight: 400;
-      color: #fff;
-      font-size: 1.3rem;
-    }
-    nav {
-      margin: 2rem 0;
-    }
-    nav a {
-      color: #00e1ff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    section {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: #232526cc;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 20px #00e1ff22;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .skill {
-      background: #00e1ff22;
-      color: #00e1ff;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-    .projects {
-      margin-top: 1.5rem;
-    }
-    .project {
-      background: #333;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 10px #00e1ff11;
-    }
-    .project a {
-      color: #00e1ff;
-      text-decoration: underline;
-    }
-    .fun-fact {
-      background: #00e1ff22;
-      color: #fff;
-      border-left: 5px solid #00e1ff;
-      padding: 1rem;
-      margin: 2rem 0;
-      border-radius: 8px;
-      font-style: italic;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      section { padding: 1rem; }
-      h1 { font-size: 2rem; }
-    }
-  </style>
+  styles.css
 </head>
 <body>
   <header>
-    https://avatars.githubusercontent.com/u/your-github-username
-    <h1>Kunal Maurya</h1>
-    <h2>DevOps & Cloud Engineer | Automating the Future 🚀</h2>
-    <nav>
-      #aboutAbout</a>
-      #skillsSkills</a>
-      #projectsProjects</a>
-      #contactContact</a>
-    </nav>
+    <div class="container">
+      <img src="https://avatars.githubusercontent.comthub-username
+      <h1>Kunal Maurya</h1>
+      <h2>DevOps & Cloud Engineer</h2>
+      <p class="tagline">Automating the future, one pipeline at a time 🚀</p>
+      <nav>
+        #aboutAbout</a>
+        #skillsSkills</a>
+        #projectsProjects</a>
+        #contactContact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>👋 About Me</h2>
-    <p>
-      Hi, I'm Kunal—a passionate DevOps & Cloud Engineer who loves building, breaking, and automating things in the cloud! <br>
-      I thrive on solving real-world problems, mentoring students, and making infrastructure as code look like magic. <br>
-      <span style="color:#00e1ff;">#Terraform #Kubernetes #GitHubActions #AWS #Docker</span>
-    </p>
-    once automated my coffee machine with a Raspberry Pi and a Slack bot. Productivity went up by 200% ☕🤖
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>🛠️ Skills</h2>
-    <div class="skills">
-      <div class="skill">AWS</div>
-      <div class="skill">Azure</div>
-      <div class="skill">GCP</div>
-      <div class="skill">Kubernetes</div>
-      <div class="skill">Docker</div>
-      <div class="skill">Terraform</div>
-      <div class="skill">GitHub Actions</div>
-      <div class="skill">CI/CD</div>
-      <div class="skill">Linux</div>
-      <div class="skill">Python</div>
-      <div class="skill">Monitoring & Observability</div>
-      <div class="skill">Mentoring</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>🚀 Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <strong>Production-Grade EKS with Terraform & GitHub Actions</strong><br>
-        Automated EKS provisioning using Terraform modules and dynamic GitHub Actions workflows.<br>
-        https://github.com/your-github-username/eks-terraform-github-actionsView on GitHub</a>
+  <main>
+    <section id="about" class="container">
+      <h3>👋 About Me</h3>
+      <p>
+        Hi, I'm Kunal—a passionate DevOps & Cloud Engineer who loves building, breaking, and automating things in the cloud!<br>
+        I thrive on solving real-world problems, mentoring students, and making infrastructure as code look like magic.<br>
+        <span class="highlight">#Terraform #Kubernetes #GitHubActions #AWS #Docker</span>
+      <section id="skills" class="container">
+      <h3>🛠️ Skills</h3>
+      <div class="skills-list">
+        <div class="skill">
+          <span>AWS</span>
+          <div class="skill-bar" data-skill="90"></div>
+        </div>
+        <div class="skill">
+          <span>Kubernetes</span>
+          <div class="skill-bar" data-skill="85"></div>
+        </div>
+        <div class="skill">
+          <span>Terraform</span>
+          <div class="skill-bar" data-skill="80"></div>
+        </div>
+        <div class="skill">
+          <span>Docker</span>
+          <div class="skill-bar" data-skill="85"></div>
+        </div>
+        <div class="skill">
+          <span>GitHub Actions</span>
+          <div class="skill-bar" data-skill="80"></div>
+        </div>
+        <div class="skill">
+          <span>Python</span>
+          <div class="skill-bar" data-skill="75"></div>
+        </div>
+        <div class="skill">
+          <span>Linux</span>
+          <div class="skill-bar" data-skill="90"></div>
+        </div>
       </div>
-      <div class="project">
-        <strong>Cloud-Native Payment Processing on EKS</strong><br>
-        Built a scalable payment system using KEDA, Karpenter, and Kubernetes autoscaling.<br>
-        <a href="https://github.com/ub-username/payment-processing-eksView on GitHub</a>
-      </div>
-      <div class="project">
-        <strong>DevOps Workshop for Students</strong><br>
-        Designed and delivered hands-on DevOps sessions for college students, focusing on real-world cloud practices.<br>
-        <a href="https://github.com/your-github-username/devops-workshop"tHub</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>📬 Contact</h2>
-    <p>
-      mailto:kunal.maurya@email.comEmail</a> |
-      https://linkedin.com/in/your-linkedinLinkedIn</a> |
-      <a href="https://github.com/ub-usernameGitHub</a>
-    </p>
-  </section>
+    <section id="projects" class="container">
+      <h3>🚀 Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Production-Grade EKS with Terraform & GitHub Actions</h4>
+          <p>Automated EKS provisioning using Terraform modules and dynamic GitHub Actions workflows.</p>
+          <a href="https://github.com/your-github-username/eks-terraform-github-actions" target="_       </div>
+        <div class="project-card">
+          <h4>Cloud-Native Payment Processing on EKS</h4>
+          <p>Built a scalable payment system using KEDA, Karpenter, and Kubernetes autoscaling.</p>
+          https://github.com/your-github-username/payment-processing-eks
+        </div>
+        <div class="project-card">
+          <h4>DevOps Workshop for Students</h4>
+          <p>Designed and delivered hands-on DevOps sessions for college students, focusing on real-world cloud practices.</p>
+          <a href="https://github.com/your-github-username/devhopView on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h3>📬 Contact</h3>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="formStatus"></p>
+      </form>
+      <div class="social-links">
+        <a href="mailto:kun@email.comEmail</a>
+        https://linkedin.com/in/your-linkedinLinkedIn</a>
+        https://github.com/your-github-usernameGitHub</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Kunal Maurya | Built with 💙, Docker, and a lot of YAML.
   </footer>
+  script.js</script>
 </body>
 </html>
